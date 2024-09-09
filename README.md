@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/b3ace866-fd66-4fb7-8327-f26d1717cc62)# Automated-Image-Resizer
-
 ## Project Description
 This project focuses on building an automated system for image processing and management within the AWS ecosystem. The goal is to streamline the handling of images by automatically resizing them and transferring them to a designated storage location while keeping stakeholders informed through notifications. Key AWS services, such as Lambda, S3, and SNS, are used to orchestrate this workflow.
 
@@ -18,13 +16,13 @@ This project focuses on building an automated system for image processing and ma
 ### Step 1: Creating Source and Destination S3 Buckets
 1. Navigate to the S3 Console.
    ![image](https://github.com/user-attachments/assets/d4286e39-7df1-466a-9ff8-d9c285f8d37e)
-   ![image](https://github.com/user-attachments/assets/b51ce11e-ffc3-4ea7-815a-70f40dd6142c)
+   ![image](https://github.com/user-attachments/assets/ecf3976e-ae5e-4af0-98bd-1c80fdf1e2f3)   
    Don't change any other settings, just scroll down and click `Create Bucket`.
    ![image](https://github.com/user-attachments/assets/5b7441f9-ac01-4eeb-bcf9-0455b0010f26)
    ![image](https://github.com/user-attachments/assets/fb9dbbb9-3939-48d4-8c63-9e8d2bc9e24d)
 
 2. Create the destination bucket using the same steps and give it a unique name.
-   ![image](https://github.com/user-attachments/assets/f3566e35-985f-4e0c-8028-b0e97c2368c8)
+   ![image](https://github.com/user-attachments/assets/ab04b2fa-1c9f-4b22-ad31-1be3efb11c85)
 
 3. As you can see above, I created two buckets: one is the Source bucket, and the other is the Destination bucket.
 
@@ -121,7 +119,21 @@ This project focuses on building an automated system for image processing and ma
     ![image](https://github.com/user-attachments/assets/30e9cfeb-67ae-4e8c-bd0e-8cc10e790caf)
     ![image](https://github.com/user-attachments/assets/7b848ec0-a15d-40aa-82a8-931200acf67d)
 
- 3. 
+ 3. Open Destination Bucket
+    - You can see that automatically new folder is created and inside this folder we can find our resized image
+      ![image](https://github.com/user-attachments/assets/4e3c2a4b-f218-4ce6-aa2b-5b67b149b4d1)
+
+    - Initially size was 108.4 kb
+      ![image](https://github.com/user-attachments/assets/5b1671bd-2fd0-4e6b-be2a-f27a6661419f)
+   
+    - It changed to 77.1 kb
+      ![image](https://github.com/user-attachments/assets/0933350e-b4be-47f1-9e8d-be772bc01310)
+
+    - Also received the notification
+      ![image](https://github.com/user-attachments/assets/7ea0f209-6580-44e6-b251-1121070551ad)
+
+
+
 
 
 
