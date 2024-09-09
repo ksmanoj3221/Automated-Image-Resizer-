@@ -1,4 +1,4 @@
-# Automated-Image-Resizer
+![image](https://github.com/user-attachments/assets/b3ace866-fd66-4fb7-8327-f26d1717cc62)# Automated-Image-Resizer
 
 ## Project Description
 This project focuses on building an automated system for image processing and management within the AWS ecosystem. The goal is to streamline the handling of images by automatically resizing them and transferring them to a designated storage location while keeping stakeholders informed through notifications. Key AWS services, such as Lambda, S3, and SNS, are used to orchestrate this workflow.
@@ -105,6 +105,17 @@ This project focuses on building an automated system for image processing and ma
      ![image](https://github.com/user-attachments/assets/c737b764-d5a2-455a-bbc5-37d281961909)
    - Click `Specify an ARN: arn:aws:lambda:us-east-1:770693421928:layer:Klayers-p39-pillow:1`
      ![image](https://github.com/user-attachments/assets/883b566d-7597-4b1e-8676-7f3cb881000f)
+
+8. After done all the actions above , now we can test our code.
+   -Lambda -> Functions -> image-resize-function
+     ![image](https://github.com/user-attachments/assets/15bb19cf-47a0-4e15-b8c9-cb4d3ed3cba2)
+   -Give Event name and Click `Save`
+     ![image](https://github.com/user-attachments/assets/6be330c2-22c6-48ed-919b-9853add72f54)
+   -It will show some results like below , It runs successfully but return some error because we still not upload the images in S3 yet.
+     ![image](https://github.com/user-attachments/assets/6f53c493-c3c8-4e82-8aaa-4221cd3bfe9a)
+
+
+
 
 
 
