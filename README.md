@@ -7,3 +7,5 @@ This project focuses on building an automated system for image processing and ma
 3. Real-time notifications: Receive immediate updates about image processing via SNS.
 4. Scalable architecture: Design for scalability to handle image processing demands.
 5. Cost-efficient solution: Leverage AWS serverless technologies to minimize operational costs.
+## Overview
+![image](https://github.com/user-attachments/assets/135cb1f9-171a-40bd-9a46-747b5755351a)
