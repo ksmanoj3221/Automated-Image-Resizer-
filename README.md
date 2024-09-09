@@ -55,10 +55,82 @@ Creating Source and Destination S3 Buckets:
    ![image](https://github.com/user-attachments/assets/6bdca488-ae03-4ebc-b1aa-7ca7a23c0d2d)
 
 
+### Step 3
+## Creating the Lambda:
+   1.Navigate to the Lambda Console.
+      ![image](https://github.com/user-attachments/assets/956d7f01-bd85-49a7-81fd-7e36ed3a78de)
+   2.Select author from scratch, give function name, select python 3.9 and created function 
+      ![image](https://github.com/user-attachments/assets/10eeb1cd-d528-4317-a298-490fda6517e9)
+      ![image](https://github.com/user-attachments/assets/3f7fd0f5-9cbe-4036-af31-7b93b13be80d)
+
+   3.Now replace the default code with the image-resizing-s3.py and deploy the changes , Don't test the code now we have to do some more actions before testing.
+      ![image](https://github.com/user-attachments/assets/fa83cb29-f74c-464e-b57f-9fd203221fb4)
+
+   4.After that , We have to give some permission for our Lambda Function to do our process (resizing) , For that navigate to the IAM Console and follow the below steps.
+      Click `Create Policy`
+      ![image](https://github.com/user-attachments/assets/9ec622a4-6f1c-4992-bd16-a2fa4a150051)
+      Search for `S3` ,  check 'All S3 actions' Specify resource ARNs for these actions: `ALL`
+      ![image](https://github.com/user-attachments/assets/9fc610d0-d94e-4f03-80cb-d30885435fae)
+      ![image](https://github.com/user-attachments/assets/f4c24a4a-743e-4ace-b6e3-dc6a53102ab2) 
+
+      Click `Add more Permissions`
+      Choose  `SNS` , check 'All SNS actions',Specify resource ARNs for these actions: `ALL`
+      ![image](https://github.com/user-attachments/assets/e9101130-542a-444a-a305-2a1a5e15d02b)
+
+      Click `Add more Permissions`
+      Choose  `Lamba` , actions Allowed `GetLayerVersion` ,Specify resource ARNs for these actions: `ALL` and click Next
+      ![image](https://github.com/user-attachments/assets/0b722092-2632-40ac-bfc6-8f05bf2d1c0b)
+
+      Add `Policy name` and Click `Create Policy
+      ![image](https://github.com/user-attachments/assets/2aaec4ab-f8c7-4193-beaa-72dd5cd3a6c1)
+   5.Now navigate to the Lambda Console and follow the steps below.
+      Config -> Permission and click on `Role Name`
+      ![image](https://github.com/user-attachments/assets/af40f840-d07a-406e-a68a-1111206b624c)
+
+      Add permission -> Attach policies
+      ![image](https://github.com/user-attachments/assets/1e7b95ec-6ee3-4c1a-a1c5-a068894e8a2a)
+
+      Search for created policy
+      ![image](https://github.com/user-attachments/assets/c9618d63-b444-4a21-9797-4fb770d1232b)
+
+      Add permission
+      ![image](https://github.com/user-attachments/assets/3a534b4d-2e84-46ed-8e77-dd33b6e905ae)
+   6.Now we have to trigger the function.
+      Lambda Console -> Configuration -> Trigger -> Add trigger
+      ![image](https://github.com/user-attachments/assets/63a3f342-0be2-46cd-b473-6a4de861d778)
+
+      Search `S3` , choose source bucket, acknowledge and click `Add`
+      ![image](https://github.com/user-attachments/assets/37ac1cb3-0c46-4e1b-a05c-e86186447f7e)
+      ![image](https://github.com/user-attachments/assets/966390f6-4270-4a36-8108-ef0f22585f00)
+
+   7.Now we have to go to code section , and scroll down to layers.
+   8.We have to add layer .
+   9.It's because for resize the image we upload in our source S3 bucket , We need a python library called pillow in our code to resize the image . We can manually add Pillow library also, But it's very time          consuming and you have to do lot more , Instead of manually adding pillow library we are going to use layers for Some easy action.
+
+      `Click` Add Layer
+      ![image](https://github.com/user-attachments/assets/c737b764-d5a2-455a-bbc5-37d281961909)
+
+      Click `Spcify an ARN : arn:aws:lambda:us-east-1:770693421928:layer:Klayers-p39-pillow:1 and click `Add
+      ![image](https://github.com/user-attachments/assets/883b566d-7597-4b1e-8676-7f3cb881000f)
+   10.After done all the actions above , now we can test our code.
+      Click `Test`
+      ![image](https://github.com/user-attachments/assets/3ace668b-7b0a-4c57-a044-b0df70f95d6c)
+
+      give event name and click  `Save`
+      ![image](https://github.com/user-attachments/assets/9869589b-382d-462d-9517-09917a4af4f9)
+   11.It will show some results like below , It runs successfully but return some error because we still not upload the images in S3 yet.
+      ![image](https://github.com/user-attachments/assets/0b682d2f-68ea-4c63-9f12-6cd03b9f07bf)
 
 
 
 
 
 
-   
+      
+
+
+
+
+`
+
+
