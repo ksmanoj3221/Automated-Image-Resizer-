@@ -114,6 +114,18 @@ This project focuses on building an automated system for image processing and ma
    - It will show some results like below , It runs successfully but return some error because we still not upload the images in S3 yet.
      ![image](https://github.com/user-attachments/assets/6f53c493-c3c8-4e82-8aaa-4221cd3bfe9a)
 
+### Step 4:
+ 1. Navigate to the S3 Console.
+    ![image](https://github.com/user-attachments/assets/224cced9-9e5d-43db-b07d-e9e7d8f11885)
+ 2. Upload Some images in Source Bucket.
+    ![image](https://github.com/user-attachments/assets/30e9cfeb-67ae-4e8c-bd0e-8cc10e790caf)
+    ![image](https://github.com/user-attachments/assets/7b848ec0-a15d-40aa-82a8-931200acf67d)
+
+ 3. 
+
+
+
+
 
 
 
