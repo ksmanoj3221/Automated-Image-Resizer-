@@ -107,11 +107,11 @@ This project focuses on building an automated system for image processing and ma
      ![image](https://github.com/user-attachments/assets/883b566d-7597-4b1e-8676-7f3cb881000f)
 
 8. After done all the actions above , now we can test our code.
-   -Lambda -> Functions -> image-resize-function
+   - Lambda -> Functions -> image-resize-function
      ![image](https://github.com/user-attachments/assets/15bb19cf-47a0-4e15-b8c9-cb4d3ed3cba2)
-   -Give Event name and Click `Save`
+   - Give Event name and Click `Save`
      ![image](https://github.com/user-attachments/assets/6be330c2-22c6-48ed-919b-9853add72f54)
-   -It will show some results like below , It runs successfully but return some error because we still not upload the images in S3 yet.
+   - It will show some results like below , It runs successfully but return some error because we still not upload the images in S3 yet.
      ![image](https://github.com/user-attachments/assets/6f53c493-c3c8-4e82-8aaa-4221cd3bfe9a)
 
 
